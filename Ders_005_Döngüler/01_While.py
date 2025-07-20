@@ -169,3 +169,49 @@ Döngüler : While, For olmak üzere 2 çeşittir.
 #
 # print(sayi2+sayi1)
 
+#region # 1-100 arasındaki sayıların toplayan program. Ancak aşağıdaki durumlarda sayıyı toplama eklemeyecek.
+# * Sayı 7'nin katı ise toplama eklenmesin.
+# * Sayı'nın 3 katının 7 fazlası 37'nın katı ise döngüden çıksın.
+
+i=1
+toplam=0
+# while i<101:
+#
+#     if ((3*i)+7)%37==0:
+#         break
+#
+#     if i%7==0:
+#         i+=1
+#         continue
+#     toplam=toplam+i
+#     i+=1
+
+
+while i < 101:
+    if ((3 * i) + 7) % 37 == 0:
+        break
+
+    if i % 7 != 0:
+        toplam = toplam + i
+    i += 1
+print("Toplam:",toplam)
+
+#endreion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

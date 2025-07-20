@@ -14,7 +14,8 @@ from stringprep import in_table_a1
 
 bakiye=2500
 sifre ="ab18"
-
+tc=12345678909
+cepTel=5366295131
 while True:
     print("1-Kartlı İşlem\n2-Kartsız İşlem\n3-Çıkış")
     kartSecim=input("Seçiminiz:")
@@ -148,12 +149,83 @@ while True:
             else:
                 print("Şifreniz Hatalı!! Kalan hakkınız:",hak)
 
-
-
-
-
     elif kartSecim=="2":
-        pass
+        while True:
+            print("""    
+    **** Ana Menü ****
+    CepBank Para Çekmek 1
+    Para yatırmak için  2
+    Kredi Kartı Ödeme   3
+    Eğitim Ödemeleri    4
+    Ödemeler            5
+    Çıkış               6
+            """)
+            anaMenuSecim=input("Seçiminiz:")
+            if anaMenuSecim=="1":
+                hak=3
+                while hak>0:
+                    _tc=input("TC:")
+                    _cepTel=input("Cep Telefon Numarası:")
+
+                    if tc==_tc and cepTel==_cepTel:
+                        bakiye-=1000
+                        print("Paranızı alınız.")
+                    else:
+                        hak-=1
+                        print("TC veya Cep Numarası yanlış Girildi!!")
+                    if hak==0:
+                        time.sleep(3600)
+
+            elif anaMenuSecim=="2":
+                paraYatirma=input("1-Nakit Ödeme\n2-Hesaptan Ödeme\nSeçiminiz: ")
+                if paraYatirma=="1":
+                    krediKartNo=input("Kredi kart numarası:")
+
+                    if krediKartNo.isdigit() and len(krediKartNo)==12:
+                        print("Ödeme işlemi başarılı")
+                    else:
+                        print("Yetersiz Bakiye!!")
+
+                elif paraYatirma=="2":
+                    krediKartNo = input("Kredi kart numarası:")
+
+                    if krediKartNo.isdigit() and len(krediKartNo) == 12:
+                        krediKartBorcu=float(input("Borç:"))
+
+                        if bakiye>=krediKartBorcu:
+                            bakiye-=krediKartBorcu
+                            print("Kredi kartınız ödendi.","Yeni bakiyeniz:",bakiye)
+
+                        else:
+                            print("Yetersiz Bakiye!!")
+
+                        print("Ödeme işlemi başarılı")
+                    else:
+                        print("Yetersiz Bakiye!!")
+                else:
+                    print("Hatalı Yatırma İşlem seçimi!!")
+
+            elif anaMenuSecim == "3":
+                pass
+            elif anaMenuSecim == "4":
+                pass
+            elif anaMenuSecim == "5":
+                pass
+            elif anaMenuSecim == "6":
+                print("Çıkış yapılıyor..")
+                time.sleep(3)
+                break
+            else:
+                print("Hatalı Menü Seçimi!!")
+
+            donus = input("9-Ana Menü\n0-Çıkış\nSeçiminiz:")
+            if donus == "9":
+                continue
+            else:
+                break
+
+
+
     elif kartSecim == "3":
         print("Yine Bekleriz..")
         time.sleep(3)

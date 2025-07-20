@@ -1,0 +1,30 @@
+manavMeyve=list()
+manavSebze=list()
+Musteri=list()
+****** HALE ******
+Manav hale gidiyor. Hale "Mevye Mi? Sebze Mi?" soruyor.
+Manav "Meyve" seçtiğinde hale 5 çeşit meyve adını ekrana yazdırıyor.
+"
+1-Elma
+2-Armut
+3-Kiraz
+4-Mandalina
+5-Karpuz
+"
+Manav bir mevye seçtikten sonra Hale "Kaç Kilo?" sorusunu sorar. Manav bir kilo belirttikten sonra...
+Hale "Başka bir arzunuz var mı?" sorar.
+    - "Hayır" Hale bölümünde çıkılacak ve Manav bölümüne geçilecek.
+    - "Evet" tekrar "Meyve Mi? Sebze Mi?" sorusu sorulacak.
+
+****** MANAV *******
+Musteri Manav gidiyor. Manav "Mevye Mi? Sebze Mi?" soruyor.
+Musteri "Meyve" seçtiğinde manav haleden aldığı meyve veya meyvelerin adını ekrana yazdırıyor.
+Musteri varolan meyvelerden birini seçtiğinde Manav "Kaç Kilo?" sorusunu soracak
+Musterinin girmiş olduğu kilo ile manavın elinde bulunan kilo karşılaştırılacak ve yeterli kilo varsa meyve satılacak. kilo azaltılacak.
+
+Her işlem bloğu sonlandığında "Başka bir arzunuz var mı?" sorusu sorulacak.
+    - "Hayır" ise Musteri bölümüne geçilecek.
+    - "Evet" tekrar "Meyve Mi? Sebze Mi?" sorusu sorulacak.
+
+******* MÜŞTERİ *******
+Musterinin listesi yazdırılacak
